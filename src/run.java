@@ -7,6 +7,7 @@ Desc: binary search tree implementation
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.io.*;
+import java.text.DecimalFormat;
 
 public class run {
     public static void main (String[] args) throws IOException {
@@ -50,8 +51,12 @@ public class run {
                         // wait it shows the sorted data? Neat
 
         // if other tests are needed (delete, search) refer to link, should be pretty simple from here
+        DecimalFormat f = new DecimalFormat("#.00");
         long end_runtime = System.currentTimeMillis();
+        double used_mem = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+
         System.out.print("\n\n>>> Number of Values: " + data_count);
         System.out.print("\n>>> Runtime: " + (end_runtime - runtime_start) + "ms");
+        System.out.print("\n>>> Memory used: " + f.format(used_mem/Math.pow(10, 6)) + " MB");
     }
 }
