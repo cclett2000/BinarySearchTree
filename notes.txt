@@ -1,0 +1,9 @@
+- BST does not allow duplicate nodes
+
+left = left child
+right = right child
+p = parent (just use parent)
+    - if any missing; replace with NIL (NULL)
+    - root node is the only node where its parent is NULL
+        > int is primitive and cannot hold NULL
+            ^ use Integer
