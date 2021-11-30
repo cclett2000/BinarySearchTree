@@ -46,7 +46,7 @@ public class run {
         // BST stuph
         // show sorted data
         System.out.print("\nTree Inorder Traversal - Sorted Data\n\t> ");
-        tree.inorder(); // display tree structure? (inorder?)
+        tree.sort(); // display tree structure? (inorder?)
                         // this display is...functional, but makes no sense to me
                         // wait it shows the sorted data? Neat
 

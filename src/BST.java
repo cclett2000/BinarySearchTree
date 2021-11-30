@@ -26,7 +26,7 @@ class BST {
 // DELETE
 
     // delete node from BST
-    void deleteKey(int key){
+    void delete(int key){
         root = recursiveDelete(root, key);
     }
 
@@ -100,18 +100,18 @@ class BST {
         }
 
 /////////////////////////////////////////////////////////////////////
-// INORDER TRAVERSAL
+// INORDER TRAVERSAL - Sorting
 
-    void inorder(){
-        recursiveInorder(root);
+    void sort(){
+        recursiveSort(root);
     }
 
-        void recursiveInorder(Node root){
+        void recursiveSort(Node root){
             // traverse BST? print nodes?
             if(root != null){
-                recursiveInorder(root.left);
+                recursiveSort(root.left);
                 System.out.print(root.key + " ");
-                recursiveInorder(root.right);
+                recursiveSort(root.right);
             }
     }
 
