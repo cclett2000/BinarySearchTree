@@ -12,6 +12,7 @@ import java.text.DecimalFormat;
 public class run {
     public static void main (String[] args) throws IOException {
         boolean EE = false;
+        boolean display_data_sort = true; // enable/disable before & after sorting for data
 
         long runtime_start = System.currentTimeMillis();
 
@@ -38,7 +39,7 @@ public class run {
         int data_count = 0;
         System.out.print("\nData Before BST Sort \n\t> ");
             while((line = reader.readLine()) != null){
-                System.out.print(line + " ");
+                if (display_data_sort) System.out.print(line + " ");
                 tree.insert(Integer.parseInt(line));
                 data_count += 1;
             }
@@ -46,9 +47,9 @@ public class run {
         // BST stuph
         // show sorted data
         System.out.print("\nTree Inorder Traversal - Sorted Data\n\t> ");
-        tree.sort(); // display tree structure? (inorder?)
-                        // this display is...functional, but makes no sense to me
-                        // wait it shows the sorted data? Neat
+        if (display_data_sort) tree.sort();    // display tree structure? (inorder?)
+                                               // this display is...functional, but makes no sense to me
+                                               // wait it shows the sorted data? Neat
 
         // if other tests are needed (delete, search) refer to link, should be pretty simple from here
         DecimalFormat f = new DecimalFormat("#.00");
